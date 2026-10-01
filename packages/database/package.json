@@ -1,0 +1,30 @@
+{
+  "name": "@codemesh/database",
+  "version": "0.1.0",
+  "description": "CodeMesh database layer with Prisma ORM",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "migrate": "prisma migrate deploy",
+    "migrate:dev": "prisma migrate dev --name",
+    "migrate:reset": "prisma migrate reset --force",
+    "generate": "prisma generate",
+    "seed": "ts-node src/seed.ts",
+    "studio": "prisma studio",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "lint": "eslint . --ext .ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.10.0",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "prisma": "^5.10.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
+  }
+}
